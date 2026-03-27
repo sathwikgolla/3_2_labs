@@ -1,0 +1,36 @@
+Setup Eclipse foe Devops
+Install Jdk21
+Download eclipse zip and extract the contents to C:\
+Create a Maven Project from eclipse as:
+Click Next
+Click Finish
+Type Y and Press enter, You should see a Build Success message as below:
+You should see the below structure in eclipse:
+Click on pom.xml to open the file.
+Add the below dependencies to the pom.xml:
+Install Tomcat 9.0-
+Download apache-tomcat-9.0.98.zip
+Extract to C:\
+Add Tomcat to Runtime by:
+Open Project Properties, and Click on TargettedRuntime
+Click on New and Select Apache Tomcatv9.0 as below, and click Next
+Give the extracted folder of Tomcat 9.0 as below, and Click Finish.
+Open index.jsp and Press Ctrl+Shift+f , this will set the alignment of the jsp.
+Click Help-> Install New Software, and give https://testng.org/testng-eclipse-update-site/ and Click Add
+Click Next, 
+Wait until you get the below;
+Click Next, and accept the license through the radio button and then click Finish as below:
+Click on restart now
+Source code in src/main/java and test cases in src/test/java
+Goto Eclipse Marketplace and install EGIT
+Project-> Team🡪 share Project
+Click Create Repository,
+Goto Github and create a repository
+Now, go back to Eclipse and commit,
+It shows the project is unstaged:
+Click on green icon to add files to staging
+It looks as below
+Write a commit message and select Commit and Push.
+It will ask for  repository, automatically pop up otherwise give the URL, username and password for github
+Click Next,Click Finish
+

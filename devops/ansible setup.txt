@@ -1,0 +1,44 @@
+Create 2 Instances – 1. AnsibleController, 2. AnsibleNode
+Connect to AnsibleNode:
+sudo apt-get update
+sudo python3 --version(ensure you get python version)
+sudo passwd ubuntu (give password as ubuntu)
+sudo vim /etc/ssh/sshd_config 
+It will open a file, press Esc-I, then search for PasswordAuthentication, remove the # so that it is uncommented. Press Esc:wq to save and quit.
+sudo service ssh restart
+
+Connect to AnsibleController:
+sudo apt-get update
+sudo python3 –version
+ssh-keygen –t rsa –b 4096
+press enter 3 times
+Check where the public key is saved
+sudo cat /home/ubuntu/.ssh/id_rsa.pub
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQDEyHSTUveZcJmrI9fnN83ytRKT22RVAnVwY6Qt06eUKrYsCB4/H97fC9Rcx6Q1hoKh53ZbX7EHwy6iwU3GFbmWCOqwfqE1WISSB2eOsq7Uh+LfCmNdf6WkuCVAORfcbJncUlq944Ar5hO19HXtoK3NPsAu2IpqaPhBQ1npKb089Y4MLzXQSwoU08dq8VogeiNUSdBXIi8RLoszWr0fquzjAs7I5qG5ShkfdDEAdogv8is1Xsp8pTWJHZS+nTkoGjQNnOvqziyqi2bIOq5JHaX/wqbCCrPaelq9LaaFzDV9MX8P9ryF7B8oFZWGkk9leR4/4LFndE28x+atnGnNTFpSUhne3xocomGvnmxMUSlmrQt2SVIjzTzfsmOkJN8264HGRINgjLHrgMRYZ6TTL6Nv15At3/HAVRNMaJa3jpXQyEv8XttYrbqSmNNmGvvOxwO1SXTBFwkuLwcGwVXh7SmOoybGUa3RCCtgwrKbdJH5MAee6oSfb2k98HmjygsPmozfwvYDEOmANLt2TdV0eFR6EZtKQXBivPoBZ29KgC9hrbGSD/uA8oU/bODznKb+OYqOBUAaZcSbGmfBvNSkZT4kOW7dv9/DkcDFhoyNa0mDYGq7hF3sB/NUKpYJALD22wFXdxmHhuwdImrfsnUllHvEUCI0CFwTt9kBZ0OKS8Gu6Q== ubuntu@ip-172-31-44-54
+Connect to AnsibleNode
+sudo vim .ssh/authorized_keys
+Goto insert mode and Copy paste the above key in the first line as below:
+Connect to controller machine
+ssh -v ubuntu@AnsibleNode-ipaddress
+Ensure there is no error
+sudo apt-get install software-properties-common
+sudo apt-add-repository ppa:ansible/ansible
+sudo apt-get update
+sudo apt-get install -y ansible
+cd /etc/ansible
+ls
+sudo vim hosts
+Copy the Ip-address of the AnsibleNode and paste in hosts file
+
+Run the below commands from controller:
+1.	Find out the freespace in the managing nodes
+ansible all -i /etc/ansible/hosts -m command -a 'free'
+2.	create files in server1 and 2 from controller
+ansible all -i/etc/ansible/hosts -m command -a 'touch f1 f2 f3'
+To check the files created run the below:
+ssh 172.31.5.200
+ls
+3.	Install git in all server
+ansible all -m apt -a 'name=git state=present' -b
+4.	Install tomcat
+ansible all -m apt -a 'name=tomcat10 state=present update_cache=yes' -b

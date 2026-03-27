@@ -1,0 +1,31 @@
+WEEK-3 JENKINS SETUP
+Create a AWS account and sign in to your account
+In the home page of AWS search for Budgets 
+Create budget > select zero spend budget in template > and give budget name as My Zero-Spend Budget>give Email>click on create budget
+Search for EC2 > Launch Instance> give name as your wish(Jenkins)
+In Application server Select Ubuntu > Create a NewKey pair
+Number of instances should be 1
+Then Launch instance
+Go to security > click on security groups> Edit inbound rule > Add rule>select type as Custom TCP> In port range give 8080 and select 0.0.0.0/0 >Save rule  
+Select the created instance 
+Click on connect> In EC2 and connect again click on connect
+Jenkins Setup:
+ Search in another tab “Jenkins Documentation”
+Installing Jenkins > Linux
+Give the commands in the server
+sudo apt update
+sudo apt install fontconfig openjdk-21-jre
+java -version
+sudo wget -O /etc/apt/keyrings/jenkins-keyring.aschttps://pkg.jenkins.io/debian-stable/jenkins.io-2026.key echo "deb [signed-by=/etc/apt/keyrings/jenkins-keyring.asc]" \https://pkg.jenkins.io/debian-stable binary/ | sudo tee \ /etc/apt/sources.list.d/jenkins.list > /dev/null
+sudo apt update
+sudo apt install Jenkins
+sudo systemctl enable Jenkins
+sudo systemctl start Jenkins
+sudo systemctl status jenkins
+Now back to instance page copy the Public ip address
+Open the browser -->Take the public ip of devserver :8080
+Copy that url go back to Jenkins server and give 
+Sudo cat /home/ubuntu/.jenkins/secrets/intialAdminPassword
+Copy that password and paste it in the Administrator Password
+Click on install suggested plugin
+Username=”admin” and Password=”admin” and confirm password=”admin”>Save and Continue

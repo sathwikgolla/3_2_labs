@@ -1,0 +1,17 @@
+Admin@DESKTOP-ASGG5M3 MINGW64 /d/CMRIT_24_25/24-25_III_2/DEVOPS/DEVOPS_THEORY_LAB_DOCUMENTS/LAB_EXPERIMENTS/DEVOPS_LAB
+
+git clone https://github.com/Mahi-Repalle/practice.git
+cd practice
+cd src
+cd main
+cd webapp
+vim index.jsp
+git status
+git add .
+git status
+git commit -m "ab"
+git push origin master
+Click on apply and save the job 
+Don’t run the build now
+Jenkins automatically trigger the job
+Now refresh the sit server latest code changes are reflected in the sit

@@ -1,0 +1,40 @@
+Launch a new instance with name sit server and use any keypair which is created.
+Connect the instance and start typing the below commands
+Update the apt repository
+Sudo apt-get update
+Install tomcat 10
+Sudo apt-get install -y tomcat10
+Now install tomcat10 admin as well
+Sudo apt-get install tomcat10-admin
+how can we access the tomcat
+Take the public ip of sit server and add 8080(copy paste this command on the browser)
+Cd  /etc/tomcat10
+$ll
+now we need to add user in the tomcat-users.xml file
+Sudo vim tomcat-users.xml
+Go to the insert mode by using esc+i
+Type    <user username=”tomcat” password=”tomcat123”   roles=”manager-script,manager-status,manager-gui”/>
+:wq
+Now restart the tomcat service
+$sudo service tomcat10 restart
+Open Jenkins  and  add one plugin in the jenkins (deploy to container)
+Manage jenkins-->plugins-->available plugins-->select deploy to container and install it
+Now go to the jenkins dashboard
+Select the war job
+Select the configure
+Select the post build action and search deploy war/ear to a container
+Add container tomcat 9
+Add the credentials which are given in tomcat server like Username=tomcat and password=tomcat123
+Select the credentials and choose tomcat\*****> give the tomcat url (sit server path along with 8080 port no)  
+Click on apply and save and run the build now
+How can we check the artifact is deployed or not
+Take the sitserver public ip address and port no and give the context path name
+Ex: http://3.110.55.250:8080/sit
+
+
+ 
+
+ 
+
+
+

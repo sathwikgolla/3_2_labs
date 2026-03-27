@@ -1,0 +1,54 @@
+In EC2 terminal install git , maven and java
+•To install git 
+sudo apt install git -y
+•To install maven
+sudo apt install maven -y
+•To install java
+sudo apt install openjdk-21-jdk -y
+Now go to the jenkins dashboard u need to install one plugin (maven integration)
+Manage jenkins-->plugins-->available plugins-->maven integration plugin
+Without this plugin we can’t able to see the maven project 
+Once installed , click on the restart jenkins
+U need to add java and maven paths in the jenkins 
+Add JDK 
+Go to jenkins dashboard-->managejenkins-->system>In global properties -check Environmental variables > 
+Name-JAVA_HOME
+Value- /usr/lib/jvm/java-21-openjdk-amd64
+Click apply ans save.
+Add maven
+Go to jenkins dashboard-->managejenkins-->tools
+Give name and check the Install Automatically
+Click on apply and save it
+Now we can create job for war file
+Dashboard-->newitem-->war(give any name) select maven project click on ok
+Source code management-->select git--> give the github url project path(open my github account-->go to the repositories
+Select the practice repository(week-2 repository where you have the pom.xml file))
+Copy the HTTPS path paste it in the jenkins repository url
+In the buildwar>select Configure>Build >Goals give 
+clean install package -DskipTests
+And click apply and save.
+Click on build now
+If job execution is taking lot of time 
+Then
+logout the jenkins
+Stop the dev instance
+Restart the dev instanc
+Start the jenkins server
+Run the job 
+Now ur job will be excuted
+
+ 
+
+
+ 
+
+ 
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,11 @@
+WEEK-1
+Step-1: Open a browser and search for Jira and login or create account in it.
+Step-2: Select the project template as scrum.
+Step-3: After selecting template create a project and give name for it and select not familiar option and click on get started.
+Step-4: As you created the project now create sprint. In it create tasks to be completed in the sprint.
+Step-5: After creating sprint assign story points to each task in the sprint.
+Step-6: Go to scrum board and click on manage workflow and add code review block in it after in progress.
+Step-7: After creating workflow now you can move tasks as you complete them from one block to another.
+Step-8: To observe the graph that how project is going on first enable reports in settings option.
+Step-9: If the time of sprint is completed or all the tasks are completed you can complete the sprint.
+Step-10: Now click on reports go to burndown report you can see project report there.
