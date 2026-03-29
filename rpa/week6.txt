@@ -1,0 +1,23 @@
+Step 1: Open the Chrome browser activity and set the URL to:
+https://books.toscrape.com/ Source
+Step 2: Inside the browser scope / Do container, add the Extract Table Data activity to capture the book data from the web page. Source
+Step 3: In the Properties panel of the Extract Table Data activity, set the output variable in Destination data table / Out as:
+extracttabledata Source
+Step 4: Add an Output Data Table activity after the extraction step. Source
+Step 5: In the Properties panel of the Output Data Table activity, set the Data Table field to:
+extracttabledata Source
+Step 6: In the same Output Data Table activity, set the Text output variable to:
+extracttext Source
+Step 7: Add a Write Line activity after the Output Data Table activity. Source
+Step 8: In the Write Line activity, set the Text field to:
+extracttext.ToString Source
+Step 9: Add a Write Range Workbook activity to save the extracted data into Excel. Source
+Step 10: In the Write Range Workbook activity, set the Excel file name to:
+"bookstoscrape.xlsx" Source
+Step 11: Set the Sheet Name to:
+"sheet4" Source
+Step 12: In the Write Range Workbook activity, set the DataTable value to:
+extracttabledata Source
+Step 13: Run the workflow. The extracted table data will:
+be displayed as text in the output panel, and
+be written into the Excel file bookstoscrape.xlsx under sheet4

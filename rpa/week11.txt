@@ -1,0 +1,9 @@
+Step 1: Define Target Folder – The robot is configured with the For Each File in Folder activity to monitor the directory: C:\Users\user\Documents\UiPath\week11\pdf
+.Step 2: Apply Filters – It is set to specifically look for files matching the extension *.pdf and includes all subfolders within that directory.
+Step 3: Organize Execution – The files are processed one by one, ordered by name in ascending order.
+Phase 2: Identification and Extraction
+Step 4: Confirm File Path – Inside the loop, the robot uses a Message Box to display CurrentFile.FullName, which provides a visual confirmation of the specific PDF file being processed (e.g., amk_conference_paper_scopus.pdf).
+Step 5: Extract Content – The robot uses the Extract PDF Text activity, pointing to the LocalResource of the current file to read its entire textual content.
+Phase 3: Output Display
+Step 6: Show Extracted Data – Finally, a second Message Box is used to display the variable extractedtext.ToString.
+Step 7: Review Results – This pop-up reveals the full text from the PDF, such as abstracts, conference titles (e.g., "Intelligent Farming System"), and author details

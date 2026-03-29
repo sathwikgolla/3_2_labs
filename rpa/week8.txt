@@ -1,0 +1,28 @@
+Step 1: Add a Get OCR Text activity in UiPath and indicate the image or screen region that contains the company logos/text. The screenshot shows the activity as Get OCR Text using Tesseract OCR. Source
+
+Step 2: Use Tesseract OCR as the OCR engine to extract text from the selected image area. This step reads the visible logos and converts them into text. Source
+
+Step 3: Store the extracted OCR result in a variable named image. This is confirmed by the later activities that use image as the text value. Source
+
+Step 4: Add a Log Message activity after the OCR step. Source
+
+Step 5: In the Message field of the Log Message activity, enter:
+image.ToString Source
+
+Step 6: Set the Log Level to:
+Info Source
+
+Step 7: Add a Write Text File activity to save the OCR result into a text file. Source
+
+Step 8: In the Write to file field, choose a local file path. The screenshot shows a path beginning with:
+LocalResource.FromPath("week8lo...
+The full filename is truncated in the screenshot, but it is clearly a local text file path. Source
+
+Step 9: In the Text field of the Write Text File activity, enter:
+image Source
+
+Step 10: Run the workflow from the Main file and check the Output panel. The output shows that execution started, OCR text was extracted, and the process ended successfully. Source
+
+Step 11: Verify the OCR result in the Output panel. The text includes recognized company names, but some words contain OCR errors because stylized logos are harder to read accurately. Source
+
+Step 12: Confirm completion from the final output line showing the automation ended successfully in about 22 seconds.

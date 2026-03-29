@@ -1,0 +1,44 @@
+Step 1: Read Employee Data – The robot starts by using the Read Range Workbook activity to access "employee.xlsx" and read all information from "Sheet1".
+
+
+Step 2: Convert Table to Text – It uses the Output Data Table as Text activity to take the data from the mailDT variable and prepare it for preview.
+
+
+Step 3: Display Data Preview – A Message Box appears showing the contents of the data table (using outputDT.ToString) to verify the correct information was loaded.
+
+
+
+Step 4: Iterate Through Employees – The robot begins a For Each Row in Data Table loop to process every individual employee listed in mailDT.
+
+
+Step 5: Extract Name – Using the Get Row Item activity, the robot extracts the value from the "Name" column of the current row and saves it to the usrName variable.
+
+
+Step 6: Extract Email Address – Using another Get Row Item activity, it extracts the value from the "Mail" column and saves it to the mid variable.
+
+
+Step 7: Format Email Recipient – An Assign activity sets the mailIdValue variable by converting the email data into a string format.
+
+
+Step 8: Construct Email Body – An Assign activity builds the mailbody variable using a predefined template:
+
+It starts with "Hi " followed by the extracted usrName.
+
+It adds a demo message: "This is a demo for email automation.".
+
+It concludes with a sign-off: "Regards, Dr. AMK".
+
+
+Step 9: Send Email via Gmail – Within the loop, the robot uses the Send Email activity to perform the following:
+
+
+Recipient: Sends to the address stored in mailIdValue.
+
+
+Subject: Sets the subject line as "Hello".
+
+
+Body: Inserts the custom-built mailbody.
+
+
+Settings: The "Save as draft" option is set to False, meaning the email is sent immediately.

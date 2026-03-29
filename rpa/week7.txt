@@ -1,0 +1,26 @@
+Step 1: Open the Chrome browser activity and set the URL to:
+https://www.google.com/ Source
+
+Step 2: Inside the Do container, add a Type Into activity and indicate the Google search box (TEXTAREA APjFqb). Source
+
+Step 3: In the Type this field, enter:
+"Intelligent Automation" Source
+
+Step 4: In the target properties of the Type Into activity, enable Strict selector and Computer Vision for reliable element identification. Source
+
+Step 5: Configure the strict selector for the Google search text area. One screenshot shows the selector using a wildcard format:
+<webctrl id='A*' tag='TEXTAREA' /> Source
+
+Step 6: Another screenshot shows a more specific selector for the same target:
+<webctrl id='APjFqb' tag='TEXTAREA' />
+This means the workflow is refining the selector for the search box. Source
+
+Step 7: In the Computer Vision settings, keep the CV control type as InputBox. Source
+
+Step 8: After typing the text into the search box, add a Click activity for the Google Search button. Source
+
+Step 9: Validate the target element in Selection Helper. One screenshot shows that the selector was validated successfully with a Validation score: 100%. Source
+
+Step 10: If UiPath shows No matches found, open Show candidates and review similar matching UI elements to fix or improve the selector. Source
+
+Step 11: Confirm the selector after validation, then run the workflow to perform the Google search for Intelligent Automation.

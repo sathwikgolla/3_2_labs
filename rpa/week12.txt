@@ -1,0 +1,45 @@
+1. Web Data Entry Automation (Week 9)
+Introduction
+
+This workflow demonstrates integration between Excel data handling and automated web form submission using UiPath.
+
+Point-wise Explanation
+1. Initialization and Data Reading
+Target file: challenge.xlsx
+Activity used: Read Range Workbook
+Reads data from Sheet1
+Stores data in DataTable variable DT1
+2. Data Validation and Debugging
+Use Output Data Table to convert DT1 into string
+Display using Message Box
+Ensures data is correctly read before execution
+3. Dynamic Web Interaction
+Open browser using Use Application/Browser (Chrome)
+Navigate to: https://rpachallenge.com/
+Use For Each Row in Data Table
+Fill fields dynamically:
+First Name, Last Name
+Role, Company
+Address, Email, Phone
+4. Form Submission
+Click Submit button after each row entry
+5. Data Archiving
+Use Write Range Workbook
+Save processed data into Sheet2
+Maintains audit record
+Diagram: Workflow
+Excel (challenge.xlsx)
+        ↓
+Read Range → DT1
+        ↓
+Validate Data (Message Box)
+        ↓
+Open Browser (rpachallenge)
+        ↓
+For Each Row
+        ↓
+Fill Form Fields
+        ↓
+Click Submit
+        ↓
+Write Data → Sheet2

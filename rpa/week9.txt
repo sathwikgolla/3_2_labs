@@ -1,0 +1,43 @@
+
+
+Step 1: Read Excel Data – The robot uses the Read Range Workbook activity to open "challenge.xlsx" and read all data from "Sheet1".
+
+
+Step 2: Format Data for Output – It then uses Output Data Table as Text to take the information from the data table (variable DT1) and convert it into a string format.
+
+
+Step 3: Display Data Preview – A Message Box appears displaying the text version of the data using output.ToString to confirm the information was read correctly.
+
+
+
+Step 4: Open Browser – The robot launches the Chrome browser and navigates to the URL https://rpachallenge.com/.
+
+
+Step 5: Iterate Through Rows – A For Each Row in Data Table loop begins, processing every entry in DT1 one by one.
+
+
+Step 6: Enter First Name – Inside the loop, the robot identifies the "First Name" field on the website and types in the value from the current row.
+
+
+Step 7: Enter Last Name – The robot identifies the "Last Name" field and types the corresponding value from the Excel sheet.
+
+
+Step 8: Enter Role in Company – The robot identifies the "Role in Company" field and types the associated value.
+
+
+Step 9: Enter Company Name – The robot identifies the "Company Name" field and types the associated value.
+
+
+Step 10: Enter Phone Number – The robot identifies the "Phone Number" field and types the numeric value from the current row.
+
+
+Step 11: Enter Address – The robot identifies the "Address" field and types the street information.
+
+
+Step 12: Enter Email – The robot identifies the "Email" field and types the email address.
+
+
+Step 13: Submit Form – Once all fields for the current person are filled, the robot clicks the Submit button.
+
+
+Step 14: Save Processed Data – After finishing the web entry loop, the robot uses Write Range Workbook to save the contents of DT1 into "Sheet2" of the "challenge.xlsx" file for record-keeping.

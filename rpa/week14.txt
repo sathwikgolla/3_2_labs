@@ -1,0 +1,51 @@
+Based on the provided screenshots, here is a detailed, step-by-step breakdown of your automated medicine reminder system:
+
+RPA Medicine Reminder Workflow Steps
+Phase 1: Controlled Execution Loop
+
+Step 1: Infinite While Loop – The process is contained within a While activity with the condition set to True. This ensures the robot remains active to send reminders continuously or until manually stopped.
+
+
+Step 2: Data Table Iteration – Inside the loop, the robot uses the For Each Row in Data Table activity to process every entry in the mailDT variable, which contains the recipient information.
+
+Phase 3: Data Extraction and Preparation
+
+Step 3: Extract Recipient Name – Using the Get Row Item activity, the robot identifies the "Name" column from the current row and saves it to the Mailname variable.
+
+
+Step 4: Extract Recipient Email – A second Get Row Item activity extracts the data from the "Mail" column, saving it to the mailID variable.
+
+
+Step 5: Format Email Address – An Assign activity converts the mailID into a string format, stored in the emailStr variable.
+
+
+Step 6: Construct Reminder Body – An Assign activity builds the mailbody variable using a dynamic template:
+
+It starts with "Dear " or "Hi " followed by the Mailname.
+
+It includes the core message: "This is the time to take medicine".
+
+It concludes with the sign-off: "Regards Dr.AMK".
+
+Phase 4: Execution Delay and Verification
+
+Step 7: Implement Delay – A Delay activity is set for a duration of 5 seconds (00h 00m 05.000s). This prevents the system from sending emails too rapidly or hitting rate limits.
+
+
+Step 8: Final Verification – A Message Box triggers to display mailbody.ToString, allowing for a visual check of the message before it is officially sent.
+
+Phase 5: Email Dispatch
+
+Step 9: Send Automated Gmail – The Send Email activity connects to the Gmail account alagumuthukrishnans@gmail.com to dispatch the reminder:
+
+
+To: The address stored in emailStr.
+
+
+Subject: The subject line is set as "Remainder".
+
+
+Body: It inserts the personalized mailbody content.
+
+
+Settings: "Save as draft" is set to False, so the reminders are sent to the inbox immediately.
