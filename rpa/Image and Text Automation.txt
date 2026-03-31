@@ -1,0 +1,23 @@
+This experiment is about extracting text from images or non-selectable UI elements using OCR in UiPath. The workflow is simpler than the earlier weeks, but it is important because it is used when normal selectors or text extraction do not work. Source
+
+Step-by-step workflow
+Open UiPath Studio.
+Create a new process.
+Drag a Sequence into the designer panel.
+Add Use Application/Browser.
+Open the browser or target application containing the image/text you want to read.
+Indicate the window or browser tab.
+Inside the activity, add Get OCR Text.
+Use Indicate on Screen to select the image or text area.
+In OCR settings, choose an OCR engine such as UiPath Screen OCR.
+If the OCR engine requires configuration, enter the needed API Key from UiPath Automation Cloud.
+Save the extracted text into a variable such as val, var, or Ext_Txt.
+Add a Message Box below the OCR activity.
+Pass the extracted variable into the Message Box text field.
+Run the workflow.
+Verify whether the image text appears correctly in the Message Box. Source
+Important UiPath activities used
+This week mainly uses Sequence, Use Application/Browser, Get OCR Text, UiPath Screen OCR, and Message Box. The PDF also mentions other OCR options such as Google OCR, Microsoft OCR, Tesseract OCR, and OmniPage OCR. Source
+
+Expected output
+The expected result is that text from a non-selectable image or screen area is extracted and displayed in a Message Box. The PDF example shows OCR text similar to DevOps / Jenkins / Docker enterprise being successfully read

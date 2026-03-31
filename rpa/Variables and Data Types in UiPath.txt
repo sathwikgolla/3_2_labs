@@ -1,0 +1,27 @@
+Part A – String Variable
+Open UiPath Studio.
+Create a new process/project.
+Drag a Sequence activity into the workflow.
+Create a String variable.
+Assign a text value to the string variable.
+Use a Message Box to display that string output. Source
+Part B – Integer / Addition of Two Numbers
+Create two variables, such as A and B, with integer type.
+Use Assign activity to give values to A and B.
+Create another variable for result, such as C.
+Use Assign activity to calculate C = A + B.
+Drag a Message Box activity.
+Show the result using text like: "Addition is: " + C.ToString. Source
+Part C – Boolean Data Type
+Create two Boolean variables.
+Assign values such as True and False.
+Create another Boolean variable for result.
+Use Assign to perform logical operation like A And B.
+Display the Boolean result using Message Box. Source
+Part D – Array / Collection
+Create an Array variable.
+Assign values to the array, for example {1,2,3}.
+Drag a For Each activity.
+Pass the array variable into the loop.
+Inside the loop, use Message Box or Write Line.
+Display each current item one by one.

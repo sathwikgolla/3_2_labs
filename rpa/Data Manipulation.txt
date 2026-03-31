@@ -1,0 +1,32 @@
+Part A – Scalar Variables
+Create a new Sequence.
+Create scalar variables like A and B.
+Assign values to A and B.
+Perform an arithmetic operation using Assign.
+Show the result using Message Box. Source
+Part B – Text Manipulation
+Create a String variable.
+Assign text like "RPA Lab".
+Use a string function such as .ToUpper.
+Store the changed text in another variable or same variable.
+Display the updated text using Message Box. Source
+Part C – List Manipulation
+Create a variable of type List.
+Assign initial values such as {"RPA","DevOps","Compiler"}.
+Use Append Items to Collection to add more items.
+Use Remove from Collection to delete an item.
+Use For Each to loop through the list.
+Display each item using Message Box or Write Line. Source
+Part D – Dictionary Manipulation
+Create a variable of type Dictionary<Int32, String>.
+Assign values such as {1,"ANR"}, {2,"APJ"}, {3,"ASK"}.
+Drag a For Each activity.
+Pass the dictionary into the loop.
+Inside the loop, read item.Key and item.Value.
+Display each key-value pair using Message Box or Write Line. Source
+Part E – Table / DataTable Handling
+Identify the source of data, such as Excel or web page.
+Use Excel Application Scope if reading from Excel.
+Store the extracted data in a DataTable variable.
+Manipulate the data if needed.
+Use Write Range to write the final data back to Excel

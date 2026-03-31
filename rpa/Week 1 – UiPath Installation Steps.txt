@@ -1,0 +1,14 @@
+Week 1 – UiPath Installation Steps
+Open your browser and go to UiPath Cloud or the UiPath start page.
+Click Sign Up if you are a new user, or Log In if you already have an account.
+Create your UiPath account using email or Google.
+If asked, create your organization in UiPath Automation Cloud.
+In the dashboard, find Studio and click Download Studio.
+After download completes, open the installer file.
+Choose Community Edition if you are using the free student version.
+Select the installation type, usually Quick Install.
+Accept the license agreement.
+Click Install and wait for installation to finish.
+After installation, click Launch UiPath Studio.
+Sign in using the same UiPath account.
+Verify that UiPath Studio opens successfully and is ready to create a project.

@@ -1,0 +1,29 @@
+Part A – If Condition
+Open UiPath Studio and create a new workflow.
+Create integer variables such as A, B, and result variables.
+Use Input Dialog to get value of A from the user.
+Use Input Dialog to get value of B from the user.
+Drag an If activity.
+Set the condition, for example A < B.
+In the Then branch, use Assign to calculate addition.
+Show the addition result using Message Box.
+In the Else branch, use Assign to calculate multiplication.
+Show the multiplication result using Message Box. Source
+Part B – Switch Case
+Create a variable to store the selected day.
+Use Input Dialog with multiple-choice options for days.
+Store the selected value in the day variable.
+Drag a Switch activity.
+Use the day variable as the switch expression.
+Create cases like Monday, Tuesday, Wednesday, etc.
+In each case, place a Message Box showing the selected day.
+Add a Default case for invalid selection. Source
+Part C – While Loop
+Create a variable n for input number.
+Use Input Dialog to take the number from the user.
+Create a variable fact and assign value 1.
+Drag a While activity.
+Set the condition n > 1.
+Inside the loop, calculate fact = fact * n.
+Decrease n using n = n - 1.
+After loop ends, display factorial result using Message Box.

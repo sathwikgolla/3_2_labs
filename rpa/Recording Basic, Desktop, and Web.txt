@@ -1,0 +1,49 @@
+This experiment is about learning how UiPath records user actions automatically in different environments: simple/basic actions, desktop applications like Notepad, and web applications like Google/Gmail. The workflow in the PDF can be rewritten into the following proper order. Source
+
+Part A: Initial setup
+Open UiPath Studio.
+Create a new project.
+Decide which application you want to automate:
+a basic application,
+a desktop application like Notepad,
+or a web application like Google/Gmail.
+Make sure the required software is installed:
+UiPath Studio,
+a browser such as Chrome,
+and the desktop application you want to use. Source
+Part B: Basic/Desktop recording workflow
+Drag a Sequence into the workflow.
+Open Notepad.
+In UiPath, choose Use Application/Browser or App/Web Recorder.
+Indicate the Notepad window as the target application.
+Start recording.
+Click inside the Notepad typing area.
+Use Type Into activity to enter text such as “Welcome to RPA Laboratory”.
+If needed, enable:
+Click before typing
+Empty field before typing
+Continue typing the next text if required by the workflow, such as “First Recording”.
+Stop or pause the recorder.
+Save the recording so UiPath converts the actions into activities inside the workflow.
+Run the workflow and verify whether Notepad is opened and the text is typed automatically. Source
+Part C: Web recording workflow
+Create another Sequence for web recording.
+Add Use Application/Browser.
+Open a browser and go to google.com.
+Start App/Web Recorder.
+Click the search bar.
+Use Type Into to enter gmail.com.
+Press Enter or use a click action to open Gmail.
+Click Sign In.
+Use Type Into for the email field.
+Click Next or Confirm.
+Use Type Into for the password field.
+Click Next again.
+If included in the workflow, click an email item to open it.
+Stop recording.
+Save the recording and run the automation to test whether the browser actions are replayed correctly. Source
+Important UiPath activities used
+The main activities mentioned for this week are Sequence, Use Application/Browser, App/Web Recorder, Type Into, Click, and keyboard actions like Enter. Source
+
+Expected output
+The expected result is that UiPath should automatically type text into Notepad for desktop recording and perform the recorded browser actions for Google/Gmail in web recording. Source

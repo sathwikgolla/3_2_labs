@@ -1,0 +1,38 @@
+This experiment teaches two different extraction methods in UiPath: screen scraping for unstructured text and data scraping for structured data like tables and lists. The PDF shows both workflows, and below is the clean execution sequence. Source
+
+Part A: Screen scraping workflow
+Open UiPath Studio and create a new project.
+Add a Sequence.
+Add Use Browser or Use Application/Browser.
+Open the browser and navigate to wikipedia.org.
+Use Type Into in the search box.
+Type “Robotic Process Automation”.
+Click the search icon or press Enter.
+Once the page opens, choose the Screen Scraping or Get Text approach.
+Indicate the specific paragraph or text region you want to extract.
+Store the output in a string variable such as Ext_Txt.
+Add Write Text File.
+Pass the extracted variable into the Text property.
+Save the content into a file like Robotic Process.doc or text file.
+Run the workflow.
+Verify whether the required Wikipedia text is successfully extracted and saved. Source
+Part B: Data scraping workflow
+Create another Sequence.
+Open a browser and navigate to books.toscrape.com.
+Use the Data Scraping wizard.
+Indicate the first structured element, such as:
+book title,
+price,
+availability.
+Let UiPath detect the repeating pattern.
+Extract the data into a DataTable variable, such as Ext_Data.
+Add Write Range Workbook or Excel writing activity.
+Create or choose an Excel file such as Name.xlsx.
+Write the DataTable into the sheet.
+Run the workflow.
+Open the Excel file and verify that the extracted rows appear correctly. Source
+Important UiPath activities used
+This week mainly uses Sequence, Use Browser, Type Into, Click, Get Text, Screen Scraping, Data Scraping, Extract Table Data, Write Text File, and Write Range Workbook. Source
+
+Expected output
+The screen scraping part should extract Wikipedia text related to Robotic Process Automation and save it to a document/text file. The data scraping part should save a structured table of books, prices, and availability into an Excel file

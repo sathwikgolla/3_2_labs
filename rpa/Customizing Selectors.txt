@@ -1,0 +1,36 @@
+This experiment focuses on making UiPath automation more stable by editing selectors. The PDF describes using UiExplorer, adjusting attributes, using wildcards, and validating selectors so the bot can identify dynamic web elements correctly. Source
+
+Step-by-step workflow
+Open UiPath Studio and create a new project.
+Add a Sequence.
+Add Use Browser and open a site such as amazon.in.
+In the address bar or target input, use Type Into to enter the website name if needed.
+Press Enter to open the page.
+Indicate the search bar.
+Use Type Into to search for a product like mobile.
+Use keyboard actions such as Down and Enter if the workflow uses suggestion selection.
+Choose a target element on the page, such as:
+search box,
+update location,
+Prime,
+a product item.
+Open UiExplorer for that target element.
+Check the selector attributes carefully.
+Remove unstable or dynamic attributes.
+Keep only the useful and identifying attributes.
+If some value changes dynamically, replace that part with a wildcard *.
+Validate the selector inside UiExplorer.
+Paste the updated selector back into the activity properties.
+Continue the workflow with actions like:
+Hover
+Get Text
+Double Click
+Type Into
+If required, take a screenshot using Take Screenshot.
+Highlight the target element if the workflow includes element verification.
+Run the automation and confirm that UiPath correctly identifies the same element even when the page changes slightly. Source
+Important UiPath activities and concepts used
+The most important items in this week are UiExplorer, Edit Selector, wildcards *, Indicate Element, Type Into, Hover, Get Text, Double Click, Take Screenshot, and selector validation. The PDF also mentions Anchor Base as an important concept for handling difficult elements, even though its exact block arrangement is not fully visible in text extraction. Source
+
+Expected output
+The expected result is a more reliable automation that can interact with dynamic web elements, such as searching on Amazon and correctly identifying items like Update location, Prime, or a product section. A screenshot may also be generated to verify the target element.
