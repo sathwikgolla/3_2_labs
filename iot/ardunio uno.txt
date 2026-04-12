@@ -1,0 +1,72 @@
+Arduino (Microcontroller Platform)
+
+Arduino is built around a microcontroller (like ATmega328P in Arduino Uno). It executes one program continuously in a loop and directly interacts with hardware.
+
+🔹 Key Features
+
+Arduino does not run an operating system. It starts executing your program immediately after power is supplied. This makes it extremely reliable for real-time tasks like controlling motors or reading sensors.
+
+It is widely used in:
+
+Embedded systems
+Robotics
+Automation projects
+Sensor-based systems
+🔹 Arduino Uno Pin Description (Important for exams)
+1. Digital Pins (0–13)
+
+These pins are used for digital input/output (HIGH = 5V, LOW = 0V).
+
+Pins 0 (RX) and 1 (TX)
+Used for serial communication
+PWM Pins: 3, 5, 6, 9, 10, 11
+Used for analog-like output using Pulse Width Modulation
+Example: LED brightness control, motor speed
+Pin 13
+Connected to built-in LED (useful for testing)
+2. Analog Pins (A0–A5)
+
+These pins read analog signals (0 to 5V) and convert into digital values (0–1023).
+
+Used for:
+
+Temperature sensors
+Light sensors (LDR)
+Gas sensors
+3. Power Pins
+Vin → External power input (7–12V)
+5V → Regulated output
+3.3V → Low voltage output
+GND → Ground (multiple pins)
+4. Other Important Pins
+AREF → Analog reference voltage
+RESET → Restarts program
+🔹 Arduino Programming & Installation
+Software: Arduino IDE
+Steps:
+Download Arduino IDE
+Install and open it
+Connect Arduino via USB
+Select:
+Board: Arduino Uno
+Port: COM (example COM3)
+Write code (C/C++ based)
+
+Example:
+
+void setup() {
+  pinMode(13, OUTPUT);
+}
+
+void loop() {
+  digitalWrite(13, HIGH);
+  delay(1000);
+  digitalWrite(13, LOW);
+  delay(1000);
+}
+Click Upload
+🔹 Advantages of Arduino
+Simple and beginner-friendly
+Real-time performance
+Low power consumption
+Cheap and reliable

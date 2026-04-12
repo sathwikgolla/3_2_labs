@@ -1,0 +1,83 @@
+Raspberry Pi (Single Board Computer)
+
+Raspberry Pi is a full computer capable of running an operating system like Linux. It can perform multitasking like a desktop.
+
+🔹 Key Features
+Has CPU, RAM, storage (via SD card)
+Supports keyboard, mouse, monitor
+Can run Python, Java, C++, etc.
+Can connect to internet (Wi-Fi/Ethernet)
+
+Used in:
+
+Web servers
+AI & ML projects
+IoT systems
+Media centers
+🔹 GPIO Pins (40 Pins Detailed Explanation)
+
+GPIO = General Purpose Input Output
+
+1. Power Pins
+Pin 1 → 3.3V
+Pin 2 & 4 → 5V
+GND Pins → 6, 9, 14, 20, 25, 30, 34, 39
+2. GPIO Pins (Data Pins)
+
+These are programmable pins:
+
+Examples:
+
+GPIO17 → Pin 11
+GPIO18 → Pin 12
+GPIO27 → Pin 13
+
+Used for:
+
+LEDs
+Sensors
+Motors
+3. Communication Pins
+I2C Protocol
+Pin 3 → SDA
+Pin 5 → SCL
+SPI Protocol
+Pin 19 → MOSI
+Pin 21 → MISO
+Pin 23 → SCLK
+Pin 24 → CE
+UART
+Pin 8 → TX
+Pin 10 → RX
+🔹 Raspberry Pi Installation
+Software: Raspberry Pi Imager
+Steps:
+Download Raspberry Pi Imager
+Insert SD card
+Select OS (Raspberry Pi OS)
+Click Write
+Insert SD card into Pi
+Hardware setup:
+Connect monitor (HDMI)
+Connect keyboard & mouse
+Power ON
+
+System boots like a computer
+
+🔹 Example Python Program (LED blink)
+import RPi.GPIO as GPIO
+import time
+
+GPIO.setmode(GPIO.BCM)
+GPIO.setup(17, GPIO.OUT)
+
+while True:
+    GPIO.output(17, True)
+    time.sleep(1)
+    GPIO.output(17, False)
+    time.sleep(1)
+🔹 Advantages of Raspberry Pi
+Powerful processing
+Runs full OS
+Supports networking
+Can run complex applications
